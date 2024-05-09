@@ -35,14 +35,13 @@ function BotCard({ bot, addToArmy, removeFromArmy }) {
       });}
 
   return (
-    <div className="ui column">
-     
+    <div className="bot-card">
         <div className="ui card" key={bot.id} onClick={handleClick}>
-        <Link to={`/bot/${bot.id}`}>
+        {/* <Link to={`/bot/${bot.id}`}> */}
           <div className="image">
             <img alt="oh no!" src={bot.avatar_url} />
           </div>
-          </Link>
+          {/* </Link> */}
           <div className="content">
             <div className="header">
               {bot.name}
@@ -67,7 +66,7 @@ function BotCard({ bot, addToArmy, removeFromArmy }) {
             </span>
             <span>
               <div className="ui center aligned segment basic">
-                <button className="ui mini red button" onClick={handleRemove}>
+                <button className="delete" onClick={handleRemove}>
                   x
                 </button>
               </div>
